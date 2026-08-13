@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança e Autonomia - Guia Acessível</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO COM CONTROLES DE ACESSIBILIDADE -->
+  <header>
+    <div class="conteudo-cabecalho">
+      <div class="logotipo">
+        🛡️ GUIA DE SEGURANÇA
+      </div>
+      
+      <div class="barra-acessibilidade" aria-label="Controles de Acessibilidade">
+        <!-- Botão de Leitor de Voz -->
+        <button class="botao-acessibilidade" onclick="alternarAudio()" id="botaoAlternarAudio" title="Ativar ou Desativar Voz">
+          🔊 <span id="statusAudio">Voz: LIGADA</span>
+        </button>
+
+        <!-- Botão de Alto Contraste -->
+        <button class="botao-acessibilidade" onclick="alternarTema()" title="Mudar Cores da Tela">
+          🎨 Contraste
+        </button>
+
+        <!-- Botão de Tamanho de Fonte -->
+        <button class="botao-acessibilidade" onclick="alterarTamanhoFonte()" title="Aumentar Letra">
+          🔍 Texto Grande
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INÍCIO & BOTÃO DE AJUDA FUNCIONAL -->
+    <section class="banner-boas-vindas">
+      <h1>👋 Bem-vindo ao seu Guia Digital</h1>
+      <p>Aprenda a navegar com tranquilidade, proteger seus dados e identificar enganos na internet de forma simples e acessível.</p>
+      
+      <div class="acoes-boas-vindas">
+        <button class="botao-ajuda-inicio" onclick="abrirModalAjuda()">
+          ❓ Precisa de Ajuda? Clique Aqui!
+        </button>
+      </div>
+    </section>
+
+    <!-- ALERTA DE EMERGÊNCIA -->
+    <div class="banner-alerta">
+      <h2>⚠️ EM DÚVIDA OU EM PERIGO?</h2>
+      <p>Nunca envie dinheiro ou confirme senhas sem falar antes com alguém de sua inteira confiança!</p>
+      <a href="tel:190" class="botao-emergencia" onclick="falar('Ligando para a Polícia Militar pelo número 1 9 0')">
+        📞 Ligar para Emergência (190)
+      </a>
+    </div>
+
+    <!-- NAVEGAÇÃO EM ABAS -->
+    <nav class="abas-navegacao">
+      <button class="botao-aba ativo" onclick="mostrarCategoria('dicas', this)">
+        💡 Dicas Importantes
+      </button>
+      <button class="botao-aba" onclick="mostrarCategoria('suspeito', this)">
+        🚨 Estou caindo em Golpe?
+      </button>
+      <button class="botao-aba" onclick="mostrarCategoria('golpes', this)">
+        ⚠️ Golpes Frequentes
+      </button>
+      <button class="botao-aba" onclick="mostrarCategoria('direitos', this)">
+        ⚖️ Direitos na Internet
+      </button>
+    </nav>
+
+    <!-- ABA 1: DICAS IMPORTANTES DE SEGURANÇA DIGITAL -->
+    <div id="dicas" class="secao-cartoes">
+      
+      <div class="cartao">
+        <h3>💡 1. Senhas são como a Chave da sua Casa</h3>
+        <div class="caixa-destaque">
+          <p>Sua senha dá acesso à sua vida financeira e pessoal. Nunca anote senhas em papéis fáceis de achar nem compartilhe com estranhos.</p>
+        </div>
+        <p><strong>Dica de Ouro:</strong> Crie senhas com palavras fáceis de lembrar para você, mas difíceis para os outros adivinharem.</p>
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir Dica
+        </button>
+      </div>
+
+      <div class="cartao">
+        <h3>💡 2. O Tempo é o seu Maior Aliado</h3>
+        <div class="caixa-destaque">
+          <p>Golpistas sempre têm pressa! Eles tentam fazer você agir no susto para não ter tempo de pensar.</p>
+        </div>
+        <p><strong>Dica de Ouro:</strong> Respire fundo e pare. Sempre que sentir urgência em uma mensagem, desconfie na hora.</p>
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir Dica
+        </button>
+      </div>
+
+      <div class="cartao">
+        <h3>💡 3. Redes Sociais e Privacidade</h3>
+        <div class="caixa-destaque">
+          <p>Evite postar fotos de documentos, passagens de viagem ou detalhes da sua rotina diária em redes sociais abertas.</p>
+        </div>
+        <p><strong>Dica de Ouro:</strong> Mantenha suas redes sociais configuradas para que apenas amigos e familiares vejam suas fotos.</p>
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir Dica
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ABA 2: COMO SABER SE ESTÁ CAINDO EM UM GOLPE -->
+    <div id="suspeito" class="secao-cartoes" style="display: none;">
+      
+      <div class="cartao">
+        <h3>🚨 Atitudes Suspeitas: Sinais de Alerta</h3>
+        <p>Preste muita atenção se a pessoa que está conversando com você fizer algo destas coisas:</p>
+        
+        <ul>
+          <li><strong>Urgência Exagerada:</strong> Diz que sua conta será bloqueada "agora" se você não fizer um PIX ou pagamento rápido.</li>
+          <li><strong>Pedido de Segredo:</strong> Pede para você "não contar para ninguém", nem para seus filhos ou para o gerente do banco.</li>
+          <li><strong>Links Estranhos:</strong> Envia um link por SMS ou WhatsApp e exige que você clique para atualizar cadastro.</li>
+          <li><strong>Promessas de Dinheiro Fácil:</strong> Oferece prêmios grandes, sorteios que você não participou ou empréstimos com facilidade excessiva.</li>
+          <li><strong>Pedido de Fotos/Códigos:</strong> Pede fotos do seu rosto (biometria) ou o código de 6 dígitos enviado ao seu celular.</li>
+        </ul>
+
+        <div class="caixa-destaque">
+          <p><strong>Sua Regra de Ouro:</strong> Se notar QUALQUER uma dessas atitudes, DESLIGUE a ligação ou FECHE a conversa imediatamente!</p>
+        </div>
+
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir Sinais de Alerta
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ABA 3: GOLPES FREQUENTES -->
+    <div id="golpes" class="secao-cartoes" style="display: none;">
+      
+      <div class="cartao">
+        <h3>1. Falso Parente no WhatsApp</h3>
+        <p><strong>Como funciona:</strong> Alguém manda mensagem dizendo que trocou de número e finge ser seu filho, neto ou parente pedindo dinheiro urgente.</p>
+        <ul>
+          <li>❌ <strong>NÃO faça:</strong> Não envie dinheiro nem PIX sem falar com a pessoa por voz.</li>
+          <li>✅ <strong>FAÇA:</strong> Ligue para o número ANTIGO do seu parente para confirmar.</li>
+        </ul>
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir esta Dica
+        </button>
+      </div>
+
+      <div class="cartao">
+        <h3>2. Ligação da "Central do Banco"</h3>
+        <p><strong>Como funciona:</strong> Uma pessoa muito educada liga dizendo ser do seu banco e avisa sobre uma compra suspeita no seu cartão.</p>
+        <ul>
+          <li>❌ <strong>NÃO faça:</strong> Nunca diga suas senhas nem digite códigos no teclado do telefone.</li>
+          <li>✅ <strong>FAÇA:</strong> Desligue o telefone. O banco NUNCA liga pedindo senha ou para você fazer transferência de segurança.</li>
+        </ul>
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir esta Dica
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ABA 4: DIREITOS NA INTERNET -->
+    <div id="direitos" class="secao-cartoes" style="display: none;">
+      
+      <div class="cartao">
+        <h3>⚖️ Seus Direitos Digitais Essenciais</h3>
+        <p>Assim como na vida real, você tem direitos protegidos por lei quando usa a internet e o celular no Brasil:</p>
+
+        <ul>
+          <li><strong>Direito à Privacidade e Proteção de Dados (LGPD):</strong> Suas informações pessoais e fotos pertencem a você. Nenhuma empresa pode vender ou usar seus dados sem sua autorização.</li>
+          <li><strong>Direito à Acessibilidade:</strong> Sites e aplicativos devem oferecer opções para pessoas idosas e com baixa visão conseguirem navegar com facilidade.</li>
+          <li><strong>Direito de Cancelar Compras Online:</strong> Se comprar algo pela internet, você tem até 7 dias após receber o produto para desistir e receber todo o seu dinheiro de volta.</li>
+          <li><strong>Direito ao Atendimento Humano:</strong> Ao falar com bancos ou serviços públicos, você tem o direito de solicitar atendimento por uma pessoa real, e não apenas por robôs.</li>
+        </ul>
+
+        <button class="botao-ler" onclick="lerConteudo(this.parentElement)">
+          📢 Ouvir Meus Direitos
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL DE AJUDA FUNCIONAL -->
+  <div id="modalAjuda" class="camada-modal" onclick="fecharModalAjudaFora(event)">
+    <div class="conteudo-modal">
+      <h2>❓ Como Usar Este Aplicativo</h2>
+      <p>Desenvolvemos este guia para ser fácil de ler e ouvir. Veja como aproveitá-lo:</p>
+      <ul>
+        <li><strong>🔊 Ouvir em voz alta:</strong> Clique no botão azul "Ouvir" que fica abaixo de qualquer cartão para escutar o texto.</li>
+        <li><strong>🎨 Alterar cores:</strong> Use o botão "Contraste" no topo para trocar entre cores escuras, claras ou amarelo vibrante.</li>
+        <li><strong>🔍 Aumentar a letra:</strong> Use o botão "Texto Grande" no topo para deixar as letras ainda maiores.</li>
+        <li><strong>📂 Navegar pelos temas:</strong> Clique nos botões na parte central para escolher o assunto desejado.</li>
+      </ul>
+      <button class="botao-fechar-modal" onclick="fecharModalAjuda()">
+        Entendi, Fechar Ajuda
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Guia Acessível de Segurança Digital para Idosos e Baixa Visão</p>
+    <p>Navegue com Proteção e Autonomia</p>
+  </footer>
+
+  <!-- LÓGICA JAVASCRIPT -->
+  <script>
+    let vozAtivada = true;
+    let indiceTemaAtual = 0; // 0: Escuro, 1: Amarelo/Preto, 2: Claro
+    let nivelEscalaFonte = 1; // 0: Normal, 1: Grande, 2: Muito Grande
+
+    // Função de Sintetizador de Voz (Leitor de Tela)
+    function falar(texto) {
+      if (!vozAtivada || !('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const pronuncia = new SpeechSynthesisUtterance(texto);
+      pronuncia.lang = 'pt-BR';
+      pronuncia.rate = 0.85; // Ritmo adequado para idosos
+      window.speechSynthesis.speak(pronuncia);
+    }
+
+    // Leitura do Conteúdo do Cartão
+    function lerConteudo(elemento) {
+      const titulo = elemento.querySelector('h3') ? elemento.querySelector('h3').innerText : '';
+      const paragrafos = elemento.querySelectorAll('p, li');
+      let textoCompleto = titulo + '. ';
+      
+      paragrafos.forEach(p => {
+        textoCompleto += p.innerText + '. ';
+      });
+
+      falar(textoCompleto);
+    }
+
+    // Modal de Ajuda Funcional
+    function abrirModalAjuda() {
+      document.getElementById('modalAjuda').classList.add('ativo');
+      falar('Abrindo ajuda. Veja como usar o aplicativo. Você pode fechar esta tela clicando no botão ao final.');
+    }
+
+    function fecharModalAjuda() {
+      document.getElementById('modalAjuda').classList.remove('ativo');
+      falar('Ajuda fechada.');
+    }
+
+    function fecharModalAjudaFora(evento) {
+      if (evento.target.id === 'modalAjuda') {
+        fecharModalAjuda();
+      }
+    }
+
+    // Alternar Leitor de Áudio
+    function alternarAudio() {
+      vozAtivada = !vozAtivada;
+      const textoStatus = document.getElementById('statusAudio');
+      
+      if (vozAtivada) {
+        textoStatus.innerText = 'Voz: LIGADA';
+        falar('Voz explicativa ativada');
+      } else {
+        textoStatus.innerText = 'Voz: DESLIGADA';
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    // Alternar Temas de Contraste
+    function alternarTema() {
+      indiceTemaAtual = (indiceTemaAtual + 1) % 3;
+      document.body.className = '';
+
+      if (indiceTemaAtual === 1) {
+        document.body.classList.add('tema-amarelo');
+        falar('Modo Amarelo e Preto ativado');
+      } else if (indiceTemaAtual === 2) {
+        document.body.classList.add('tema-claro');
+        falar('Modo Claro ativado');
+      } else {
+        falar('Modo Escuro de Alto Contraste ativado');
+      }
+    }
+
+    // Alternar Tamanho do Texto
+    function alterarTamanhoFonte() {
+      nivelEscalaFonte = (nivelEscalaFonte + 1) % 3;
+      
+      if (nivelEscalaFonte === 0) {
+        document.documentElement.style.setProperty('--escala-fonte', '1');
+        falar('Tamanho do texto normal');
+      } else if (nivelEscalaFonte === 1) {
+        document.documentElement.style.setProperty('--escala-fonte', '1.25');
+        falar('Tamanho do texto grande');
+      } else {
+        document.documentElement.style.setProperty('--escala-fonte', '1.5');
+        falar('Tamanho do texto muito grande');
+      }
+    }
+
+    // Navegação em Abas
+    function mostrarCategoria(idCategoria, elementoBotao) {
+      document.querySelectorAll('.secao-cartoes').forEach(secao => {
+        secao.style.display = 'none';
+      });
+
+      document.querySelectorAll('.botao-aba').forEach(btn => {
+        btn.classList.remove('ativo');
+      });
+
+      document.getElementById(idCategoria).style.display = 'flex';
+      elementoBotao.classList.add('ativo');
+
+      falar('Exibindo ' + elementoBotao.innerText);
+    }
+  </script>
+</body>
+</html>
