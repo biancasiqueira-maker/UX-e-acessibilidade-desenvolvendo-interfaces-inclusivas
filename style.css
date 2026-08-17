@@ -474,3 +474,144 @@ body {
 .modal-btn:hover {
   background-color: #025aa5;
 }
+
+/* Configuração e Fontes */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #faf5f7;
+  color: #5a4b51;
+}
+
+.content {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Oculta o checkbox de controle */
+.modal-toggle {
+  display: none;
+}
+
+/* Fundo desfocado e translúcido (Overlay) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(90, 75, 81, 0.4);
+  backdrop-filter: blur(4px); /* Efeito de vidro desfocado no fundo */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Exibe o modal quando o checkbox estiver ativado */
+.modal-toggle:checked ~ .modal-overlay {
+  display: flex;
+}
+
+/* Cartão do Modal */
+.modal-card {
+  background-color: #ffffff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  max-width: 460px;
+  width: 88%;
+  box-shadow: 0 10px 30px rgba(212, 117, 137, 0.15);
+  border-top: 6px solid #e07a5f; /* Borda pastel alertante em coral */
+  text-align: center;
+  animation: modalSurgir 0.3s ease-out;
+}
+
+/* Animação suave de entrada */
+@keyframes modalSurgir {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cabeçalho do Modal */
+.modal-header {
+  margin-bottom: 15px;
+}
+
+.modal-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-title {
+  margin: 0;
+  color: #d65a6f; /* Rosa/Coral vibrante mas pastel */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Texto Introdutório */
+.modal-intro {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #726066;
+  margin-bottom: 20px;
+}
+
+/* Lista de Dicas */
+.modal-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.modal-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #5a4b51;
+}
+
+/* Ícone de alerta rosa antes de cada item da lista */
+.modal-list li::before {
+  content: '🌸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+}
+
+.modal-list strong {
+  color: #c85a6a;
+}
+
+/* Botão de Ação */
+.modal-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #e07a5f, #e8a598); /* Gradiente coral pastel */
+  color: #ffffff;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(224, 122, 95, 0.4);
+}
