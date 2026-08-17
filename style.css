@@ -581,37 +581,3 @@ body {
   line-height: 1.4;
   color: #5a4b51;
 }
-
-/* Ícone de alerta rosa antes de cada item da lista */
-.modal-list li::before {
-  content: '🌸';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 0.9rem;
-}
-
-.modal-list strong {
-  color: #c85a6a;
-}
-
-/* Botão de Ação */
-.modal-btn {
-  display: block;
-  width: 100%;
-  background: linear-gradient(135deg, #e07a5f, #e8a598); /* Gradiente coral pastel */
-  color: #ffffff;
-  padding: 14px 0;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-sizing: border-box;
-}
-
-.modal-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(224, 122, 95, 0.4);
-}
