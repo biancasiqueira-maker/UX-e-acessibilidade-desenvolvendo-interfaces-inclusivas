@@ -6,9 +6,9 @@ bntAjuda.addEventListener("click", abreModal);
 bntFechar.addEventListener("click", fechaModal);
 
 function abreModal() {
-    modal.style.diplay = "block";
+    modal.style.display = "block";
 }
 
 function fechaModal() {
-    modal.style.diplay = "none";
+    modal.style.display = "none";
 }
