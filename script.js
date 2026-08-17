@@ -5,3 +5,10 @@ let modal = document.querySelector(".botao-ajuda-inicio");
 bntAjuda.addEventListener("click", abreModal);
 bntFechar.addEventListener("click", fechaModal);
 
+function abreModal() {
+    modal.style.diplay = "block";
+}
+
+function fechaModal() {
+    modal.style.diplay = "none";
+}
