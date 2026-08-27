@@ -721,13 +721,3 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* CSS */
-p {
-  font-size: 18px; /* Tamanho inicial do texto */
-  transition: font-size 0.2s ease; /* Animação suave na troca */
-}
-
-button {
-  padding: 8px 16px;
-  cursor: pointer;
-}
