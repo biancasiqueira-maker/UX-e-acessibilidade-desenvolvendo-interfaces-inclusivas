@@ -402,3 +402,43 @@
   </script>
 </body>
 </html>
+
+<!-- Modal de Orientação para Golpes -->
+<div id="modalGolpe" class="modal-golpe-camada">
+  <div class="modal-golpe-caixa" role="dialog" aria-labelledby="titulo-modal" aria-modal="true">
+    
+    <header class="modal-golpe-cabecalho">
+      <span class="icone-alerta" aria-hidden="true">⚠️</span>
+      <h2 id="titulo-modal">O que fazer se desconfiar de um golpe?</h2>
+    </header>
+
+    <div class="modal-golpe-corpo">
+      <p class="instrucao-inicial">Se alguém pedir dinheiro ou senhas com urgência, mantenha a calma e siga estas regras:</p>
+
+      <div class="painel-orientacao painel-fazer">
+        <h3>✅ O que FAZER</h3>
+        <ul>
+          <li><strong>Desligue a ligação:</strong> Na dúvida, encerre a conversa imediatamente.</li>
+          <li><strong>Ligue para um familiar:</strong> Confirme a história usando o número de telefone de sua confiança.</li>
+          <li><strong>Procure seu banco:</strong> Use apenas o número oficial contido no seu cartão.</li>
+        </ul>
+      </div>
+
+      <div class="painel-orientacao painel-nao-fazer">
+        <h3>❌ O que NÃO FAZER</h3>
+        <ul>
+          <li><strong>Não envie PIX ou dinheiro:</strong> Nunca transfira valores sob pressão de urgência.</li>
+          <li><strong>Não passe senhas:</strong> Nenhum banco solicita senhas, PINs ou códigos por telefone/WhatsApp.</li>
+          <li><strong>Não clique em links:</strong> Evite abrir endereços de sites enviados por desconhecidos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="modal-golpe-rodape">
+      <button class="botao-prosseguir" onclick="fecharModalGolpe()">
+        Agora vamos para o site
+      </button>
+    </footer>
+
+  </div>
+</div>
