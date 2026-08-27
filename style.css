@@ -710,3 +710,18 @@ body {
   outline: 3px solid #ffeb3b;
   transform: scale(1.02);
 }
+
+/* CSS: Estilização visual da interface */
+.audio-card {
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
