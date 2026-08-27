@@ -20,3 +20,16 @@ function fecharModalGolpe() {
   }
 }
 
+// JavaScript
+function diminuirFonte() {
+  const elementoTexto = document.getElementById('texto');
+  
+  // Obtém o tamanho atual da fonte em pixels
+  const estilo = window.getComputedStyle(elementoTexto);
+  const tamanhoAtual = parseFloat(estilo.fontSize);
+  
+  // Define o limite mínimo (ex: 10px) para o texto não sumir
+  if (tamanhoAtual > 10) {
+    elementoTexto.style.fontSize = (tamanhoAtual - 2) + 'px';
+  }
+}
