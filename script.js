@@ -12,3 +12,10 @@ function abreModal() {
 function fechaModal() {
     modal.style.display = "none";
 }
+
+function fecharModalGolpe() {
+  const modal = document.getElementById('modalGolpe');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}

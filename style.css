@@ -581,3 +581,132 @@ body {
   line-height: 1.4;
   color: #5a4b51;
 }
+
+/* Camada do Modal (Fundo Escuro) */
+.modal-golpe-camada {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Caixa Principal do Modal */
+.modal-golpe-caixa {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  font-family: 'Poppins', sans-serif, Arial;
+}
+
+/* Cabeçalho */
+.modal-golpe-cabecalho {
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.icone-alerta {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal-golpe-cabecalho h2 {
+  font-size: 1.6rem;
+  color: #d32f2f;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Conteúdo */
+.instrucao-inicial {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.painel-orientacao {
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.painel-fazer {
+  background-color: #e8f5e9;
+  border-left: 6px solid #2e7d32;
+}
+
+.painel-fazer h3 {
+  color: #1b5e20;
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.painel-nao-fazer {
+  background-color: #ffebee;
+  border-left: 6px solid #c62828;
+}
+
+.painel-nao-fazer h3 {
+  color: #b71c1c;
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.modal-golpe-corpo ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.modal-golpe-corpo li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Rodapé e Botão Principal */
+.modal-golpe-rodape {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.botao-prosseguir {
+  background-color: #1b5e20;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao-prosseguir:hover,
+.botao-prosseguir:focus {
+  background-color: #2e7d32;
+  outline: 3px solid #ffeb3b;
+  transform: scale(1.02);
+}
