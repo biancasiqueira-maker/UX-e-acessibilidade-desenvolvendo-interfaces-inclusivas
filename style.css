@@ -581,9 +581,3 @@ body {
   line-height: 1.4;
   color: #5a4b51;
 }
-
-/* Oculta o primeiro modal overlay e seu checkbox de acionamento */
-.modal-overlay,
-#modal-toggle {
-  display: none !important;
-}
